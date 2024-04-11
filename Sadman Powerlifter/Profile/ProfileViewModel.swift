@@ -24,22 +24,19 @@ class ProfileViewModel: ObservableObject {
         
         ref.observeSingleEvent(of: .value) { snapshot in
             if let userData = snapshot.value as? [String: Any] {
-                if let userEmail = userData["email"] as? String {
-                    self.email = userEmail
-                }
-                if let userName = userData["name"] as? String {
-                    self.name = userName
-                }
+                self.email = userData["email"] as? String ?? "No email"
+                self.name = userData["name"] as? String ?? "No name"
             }
         }
     }
     
-    func logout() {
+    func logout(completion: @escaping (Bool) -> Void) {
         do {
             try Auth.auth().signOut()
-            // Navigate to another view after logout if needed
+            completion(true)
         } catch let error {
             print("Error signing out: \(error.localizedDescription)")
+            completion(false)
         }
     }
 }

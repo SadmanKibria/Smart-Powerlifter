@@ -10,9 +10,7 @@ import SwiftUI
 struct WorkoutView: View {
     // Mock data for demonstration
     let workouts = ["Workout 1", "Workout 2", "Workout 3"]
-    
     var body: some View {
-        NavigationView {
             List(workouts, id: \.self) { workout in
                 Text(workout)
             }
@@ -23,7 +21,6 @@ struct WorkoutView: View {
             }) {
                 Text("Start")
             })
-        }
     }
 }
 

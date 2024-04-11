@@ -8,33 +8,35 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @EnvironmentObject var sessionManager: SessionManager
     @StateObject private var viewModel = ProfileViewModel()
     
     var body: some View {
-        NavigationView {
-            Form {
-                Section(header: Text("Profile")) {
-                    Text(viewModel.email)
-                    Text(viewModel.name)
-                }
-                
-                Button(action: {
-                    viewModel.logout()
-                }) {
-                    Text("Log Out")
-                        .foregroundColor(.red)
+        Form {
+            Section(header: Text("Profile")) {
+                Text("Email: \(viewModel.email)")
+                Text("Name: \(viewModel.name)")
+            }
+            
+            Button("Log Out") {
+                viewModel.logout { success in
+                    if success {
+                        sessionManager.logout() // This should change the app's state to show LoginView
+                    }
                 }
             }
-            .onAppear {
-                viewModel.fetchData()
-            }
-            .navigationTitle("Profile")
+            .foregroundColor(.red)
         }
-    }
-    
-    struct ProfileView_Previews: PreviewProvider {
-        static var previews: some View {
-            ProfileView()
+        .onAppear {
+            viewModel.fetchData()
         }
+        .navigationTitle("Profile")
+        // Removed NavigationView wrapper to ensure it works within TabView
     }
 }
+
+#Preview {
+    ProfileView()
+}
+
+

@@ -9,17 +9,15 @@ import SwiftUI
 
 struct TrackingView: View {
     var body: some View {
-        NavigationView {
-            VStack{
-                Text("Hello tracking")
-                
-                    
-            }
-            .navigationBarTitle("Tracking")
+        VStack {
+            Text("Hello tracking")
         }
+        .navigationBarTitle("Tracking", displayMode: .inline)
     }
 }
 
 #Preview {
     TrackingView()
 }
+
+

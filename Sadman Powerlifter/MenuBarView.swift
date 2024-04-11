@@ -16,19 +16,19 @@ struct MenuBarView: View {
                     Text("Workout")
                 }
             
-            Text("1RM")
+            OneRMView()
                 .tabItem {
                     Image(systemName: "1.circle")
                     Text("1RM")
                 }
             
-            Text("Tracking")
+            TrackingView()
                 .tabItem {
                     Image(systemName: "waveform.path.ecg")
                     Text("Tracking")
                 }
             
-            Text("Profile")
+            ProfileView()
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("Profile")
@@ -42,4 +42,3 @@ struct MenuBarView_Previews: PreviewProvider {
         MenuBarView()
     }
 }
-

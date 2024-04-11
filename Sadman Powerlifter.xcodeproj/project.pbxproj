@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C34AC9162BC3FCCD00D8748C /* Sadman_PowerlifterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34AC9152BC3FCCD00D8748C /* Sadman_PowerlifterApp.swift */; };
-		C34AC9182BC3FCCD00D8748C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34AC9172BC3FCCD00D8748C /* ContentView.swift */; };
 		C34AC91A2BC3FCD200D8748C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C34AC9192BC3FCD200D8748C /* Assets.xcassets */; };
 		C34AC91D2BC3FCD200D8748C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C34AC91C2BC3FCD200D8748C /* Preview Assets.xcassets */; };
 		C34AC9242BC4062D00D8748C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C34AC9232BC4062D00D8748C /* GoogleService-Info.plist */; };
@@ -50,12 +49,14 @@
 		C34AC97A2BC43D6500D8748C /* TrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34AC9792BC43D6500D8748C /* TrackingView.swift */; };
 		C34AC97C2BC43D7500D8748C /* TrackingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34AC97B2BC43D7500D8748C /* TrackingViewModel.swift */; };
 		C34AC97F2BC4446900D8748C /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34AC97E2BC4446900D8748C /* MenuBarView.swift */; };
+		C3DA08982BC8761200332936 /* OneRMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DA08972BC8761200332936 /* OneRMView.swift */; };
+		C3DA089A2BC8763200332936 /* OneRmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DA08992BC8763200332936 /* OneRmViewModel.swift */; };
+		C3DA089C2BC87C9500332936 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DA089B2BC87C9500332936 /* SessionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C34AC9122BC3FCCD00D8748C /* Sadman Powerlifter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sadman Powerlifter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34AC9152BC3FCCD00D8748C /* Sadman_PowerlifterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sadman_PowerlifterApp.swift; sourceTree = "<group>"; };
-		C34AC9172BC3FCCD00D8748C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C34AC9192BC3FCD200D8748C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C34AC91C2BC3FCD200D8748C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C34AC9232BC4062D00D8748C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -70,6 +71,9 @@
 		C34AC9792BC43D6500D8748C /* TrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingView.swift; sourceTree = "<group>"; };
 		C34AC97B2BC43D7500D8748C /* TrackingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewModel.swift; sourceTree = "<group>"; };
 		C34AC97E2BC4446900D8748C /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		C3DA08972BC8761200332936 /* OneRMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRMView.swift; sourceTree = "<group>"; };
+		C3DA08992BC8763200332936 /* OneRmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRmViewModel.swift; sourceTree = "<group>"; };
+		C3DA089B2BC87C9500332936 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,12 +135,13 @@
 			children = (
 				C34AC9672BC40DEA00D8748C /* Login */,
 				C34AC9622BC40D7C00D8748C /* SignUp */,
-				C34AC97D2BC43D7A00D8748C /* TrackingView */,
 				C34AC9782BC43D3700D8748C /* WorkoutView */,
+				C3DA08922BC8750A00332936 /* OneRM */,
+				C34AC97D2BC43D7A00D8748C /* TrackingView */,
 				C34AC9712BC4383C00D8748C /* Profile */,
 				C34AC9152BC3FCCD00D8748C /* Sadman_PowerlifterApp.swift */,
-				C34AC9172BC3FCCD00D8748C /* ContentView.swift */,
 				C34AC97E2BC4446900D8748C /* MenuBarView.swift */,
+				C3DA089B2BC87C9500332936 /* SessionManager.swift */,
 				C34AC9192BC3FCD200D8748C /* Assets.xcassets */,
 				C34AC9232BC4062D00D8748C /* GoogleService-Info.plist */,
 				C34AC91B2BC3FCD200D8748C /* Preview Content */,
@@ -195,6 +200,15 @@
 				C34AC97B2BC43D7500D8748C /* TrackingViewModel.swift */,
 			);
 			path = TrackingView;
+			sourceTree = "<group>";
+		};
+		C3DA08922BC8750A00332936 /* OneRM */ = {
+			isa = PBXGroup;
+			children = (
+				C3DA08972BC8761200332936 /* OneRMView.swift */,
+				C3DA08992BC8763200332936 /* OneRmViewModel.swift */,
+			);
+			path = OneRM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,13 +314,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C34AC9182BC3FCCD00D8748C /* ContentView.swift in Sources */,
 				C34AC9772BC43D3100D8748C /* WorkoutViewModel.swift in Sources */,
+				C3DA08982BC8761200332936 /* OneRMView.swift in Sources */,
 				C34AC9702BC4383500D8748C /* ProfileView.swift in Sources */,
 				C34AC97C2BC43D7500D8748C /* TrackingViewModel.swift in Sources */,
 				C34AC95D2BC40CB700D8748C /* SignUpView.swift in Sources */,
 				C34AC96E2BC4382700D8748C /* ProfileViewModel.swift in Sources */,
+				C3DA089A2BC8763200332936 /* OneRmViewModel.swift in Sources */,
 				C34AC97A2BC43D6500D8748C /* TrackingView.swift in Sources */,
+				C3DA089C2BC87C9500332936 /* SessionManager.swift in Sources */,
 				C34AC9662BC40DE400D8748C /* LoginViewModel.swift in Sources */,
 				C34AC97F2BC4446900D8748C /* MenuBarView.swift in Sources */,
 				C34AC9612BC40D6600D8748C /* SignUpViewModel.swift in Sources */,
