@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WorkoutView: View {
+    @ObservedObject var viewModel: WorkoutViewModel
     // Mock data for demonstration
     let workouts = ["Workout 1", "Workout 2", "Workout 3"]
     var body: some View {
@@ -22,8 +23,8 @@ struct WorkoutView: View {
                 Text("Start")
             })
     }
-}
-
-#Preview {
-    WorkoutView()
+    
+    init(viewModel: WorkoutViewModel) {
+        self.viewModel = viewModel
+    }
 }

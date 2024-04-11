@@ -74,6 +74,7 @@
 		C3DA08972BC8761200332936 /* OneRMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRMView.swift; sourceTree = "<group>"; };
 		C3DA08992BC8763200332936 /* OneRmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRmViewModel.swift; sourceTree = "<group>"; };
 		C3DA089B2BC87C9500332936 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		C3DA089E2BC8911300332936 /* WorkoutKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WorkoutKit.framework; path = System/Library/Frameworks/WorkoutKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +120,7 @@
 			children = (
 				C34AC9142BC3FCCD00D8748C /* Sadman Powerlifter */,
 				C34AC9132BC3FCCD00D8748C /* Products */,
+				C3DA089D2BC8911300332936 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -209,6 +211,14 @@
 				C3DA08992BC8763200332936 /* OneRmViewModel.swift */,
 			);
 			path = OneRM;
+			sourceTree = "<group>";
+		};
+		C3DA089D2BC8911300332936 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3DA089E2BC8911300332936 /* WorkoutKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

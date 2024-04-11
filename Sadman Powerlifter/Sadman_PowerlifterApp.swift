@@ -10,6 +10,9 @@ import Firebase
 
 @main
 struct Sadman_PowerlifterApp: App {
+    @StateObject var sessionManager = SessionManager()
+    @StateObject var workoutViewModel = WorkoutViewModel() // Create a WorkoutViewModel instance
+    @StateObject var loginViewModel = LoginViewModel()
     
     init() {
         FirebaseApp.configure()
@@ -17,8 +20,13 @@ struct Sadman_PowerlifterApp: App {
     
     var body: some Scene {
         WindowGroup {
-            //LoginView(viewModel: LoginViewModel())
-            MenuBarView()
+            if sessionManager.isLoggedIn {
+                WorkoutView(viewModel: workoutViewModel)
+                    .environmentObject(sessionManager)
+            } else {
+                LoginView(viewModel: loginViewModel)
+                    .environmentObject(sessionManager)
+            }
         }
     }
 }

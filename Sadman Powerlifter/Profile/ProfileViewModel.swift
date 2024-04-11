@@ -15,9 +15,11 @@ class ProfileViewModel: ObservableObject {
     
     func fetchData() {
         guard let currentUser = Auth.auth().currentUser else {
-            print("User not logged in")
+            self.email = "No Email"
+            self.name = "No Name"
             return
         }
+        self.email = currentUser.email ?? "No Email"
         
         let userId = currentUser.uid
         let ref = Database.database().reference().child("users").child(userId)
